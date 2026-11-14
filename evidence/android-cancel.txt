@@ -1,0 +1,26 @@
+Running on emulator-5556
+ > Flow cancel-android
+Launch app "com.nikitasokolov.statementimport" with clear state... COMPLETED
+Assert that id: screen-title is visible... COMPLETED
+Scrolling DOWN until id: pick-file is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: pick-file... COMPLETED
+Press back... COMPLETED
+Assert that id: pick-file is visible... COMPLETED
+Tap on id: pick-file... COMPLETED
+Tap on "Show roots"... COMPLETED
+Tap on "Downloads", id: android:id/title... COMPLETED
+Tap on "statement.csv"... COMPLETED
+Assert that id: confirm-import is visible... COMPLETED
+Stop com.nikitasokolov.statementimport... COMPLETED
+Launch app "com.nikitasokolov.statementimport"... COMPLETED
+Assert that id: confirm-import is visible... COMPLETED
+Assert that "statement.csv" is visible... COMPLETED
+Scrolling DOWN until id: cancel-selection is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: cancel-selection... COMPLETED
+Scrolling UP until id: open-diagnostics is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: open-diagnostics... COMPLETED
+Scrolling DOWN until id: refresh-diagnostics is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: refresh-diagnostics... COMPLETED
+Scrolling UP until id: diagnostic-counts is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Assert that "(?s).*POST: 0.*Создано импортов: 0.*Временных копий: 0.*" is visible... COMPLETED
+Take screenshot android-cancel-cleaned... COMPLETED

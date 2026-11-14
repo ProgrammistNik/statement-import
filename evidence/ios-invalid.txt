@@ -1,0 +1,34 @@
+Running on iPhone 17e - iOS 27.2 - E614BFAC-5DB9-46F6-A928-65BD58E942AC
+ > Flow invalid-ios
+Launch app "com.nikitasokolov.statementimport" with clear state... COMPLETED
+Assert that id: screen-title is visible... COMPLETED
+Start recording ios-validation... COMPLETED
+Scrolling DOWN until id: pick-file is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: pick-file... COMPLETED
+Tap on (Optional) id: DOC.navBarButton.backInHistory... COMPLETED
+Tap on (Optional) id: DOC.navBarButton.backInHistory... WARNED
+Tap on (Optional) "Обзор"... COMPLETED
+Tap on (Optional) "На.*iPhone"... COMPLETED
+Wait for animation to end... COMPLETED
+Tap on id: spoofed, pdf... COMPLETED
+Scrolling DOWN until id: error-message is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Take screenshot ios-rejected-spoofed-pdf... COMPLETED
+Scrolling UP until id: pick-file is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: pick-file... COMPLETED
+Tap on (Optional) id: DOC.navBarButton.backInHistory... COMPLETED
+Tap on (Optional) id: DOC.navBarButton.backInHistory... WARNED
+Tap on (Optional) "Обзор"... COMPLETED
+Tap on (Optional) "На.*iPhone"... COMPLETED
+Wait for animation to end... COMPLETED
+Tap on id: oversize, csv... COMPLETED
+Scrolling DOWN until id: error-message is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Take screenshot ios-rejected-oversize-csv... COMPLETED
+Scrolling UP until id: open-diagnostics is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: open-diagnostics... COMPLETED
+Scrolling DOWN until id: diagnostic-counts is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Scrolling DOWN until id: refresh-diagnostics is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: refresh-diagnostics... COMPLETED
+Scrolling UP until id: diagnostic-counts is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Assert that "(?s).*POST: 0.*Создано импортов: 0.*Временных копий: 0.*" is visible... COMPLETED
+Take screenshot ios-no-upload... COMPLETED
+Stop recording... COMPLETED

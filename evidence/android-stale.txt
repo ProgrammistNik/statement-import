@@ -1,0 +1,27 @@
+Running on emulator-5556
+ > Flow stale-android
+Launch app "com.nikitasokolov.statementimport" with clear state... COMPLETED
+Assert that id: screen-title is visible... COMPLETED
+Start recording android-stale-status... COMPLETED
+Scrolling DOWN until id: pick-file is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: pick-file... COMPLETED
+Tap on "Show roots"... COMPLETED
+Tap on "Downloads"... COMPLETED
+Tap on "statement.csv"... COMPLETED
+Assert that id: confirm-import is visible... COMPLETED
+Tap on id: confirm-import... COMPLETED
+Assert that id: total-amount is visible... COMPLETED
+Assert that "151.99 AUD" is visible... COMPLETED
+Scrolling UP until id: open-diagnostics is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: open-diagnostics... COMPLETED
+Scrolling DOWN until id: diagnostic-counts is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Scrolling DOWN until id: refresh-diagnostics is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: refresh-diagnostics... COMPLETED
+Scrolling UP until id: diagnostic-counts is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Assert that "(?s).*Ревизия: 3.*Отброшено ответов: 1.*" is visible... COMPLETED
+Take screenshot android-stale-ignored... COMPLETED
+Scrolling DOWN until id: back-main is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: back-main... COMPLETED
+Scrolling UP until id: total-amount is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Assert that "151.99 AUD" is visible... COMPLETED
+Stop recording... COMPLETED

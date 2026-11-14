@@ -1,0 +1,62 @@
+appId: com.nikitasokolov.statementimport
+---
+- launchApp:
+    clearState: true
+- assertVisible:
+    id: screen-title
+- startRecording: android-validation
+- scrollUntilVisible:
+    element:
+      id: pick-file
+    direction: DOWN
+- tapOn:
+    id: pick-file
+- tapOn: Show roots
+- tapOn:
+    id: android:id/title
+    text: Downloads
+- tapOn: spoofed.pdf
+- scrollUntilVisible:
+    element:
+      id: error-message
+    direction: DOWN
+- takeScreenshot: android-rejected-spoofed-pdf
+- scrollUntilVisible:
+    element:
+      id: pick-file
+    direction: UP
+- tapOn:
+    id: pick-file
+- tapOn: Show roots
+- tapOn:
+    id: android:id/title
+    text: Downloads
+- tapOn: oversize.csv
+- scrollUntilVisible:
+    element:
+      id: error-message
+    direction: DOWN
+- takeScreenshot: android-rejected-oversize-csv
+- scrollUntilVisible:
+    element:
+      id: open-diagnostics
+    direction: UP
+- tapOn:
+    id: open-diagnostics
+- scrollUntilVisible:
+    element:
+      id: diagnostic-counts
+    direction: DOWN
+- scrollUntilVisible:
+    element:
+      id: refresh-diagnostics
+    direction: DOWN
+- tapOn:
+    id: refresh-diagnostics
+- scrollUntilVisible:
+    element:
+      id: diagnostic-counts
+    direction: UP
+- assertVisible: "(?s).*POST: 0.*Создано импортов: 0.*Временных копий: 0.*"
+- takeScreenshot: android-no-upload
+- stopRecording

@@ -1,0 +1,13 @@
+node_modules/
+.expo/
+ios/
+android/
+build/
+*.log
+.DS_Store
+mobile-engineer-kit/.mock-state.json
+mobile-engineer-kit/fixtures/oversize.csv
+
+.devices/
+evidence/maestro-*/
+deliverables/

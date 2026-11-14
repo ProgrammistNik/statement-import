@@ -1,0 +1,70 @@
+appId: com.nikitasokolov.statementimport
+---
+- launchApp:
+    clearState: true
+- assertVisible:
+    id: screen-title
+- startRecording: ios-happy
+- tapOn:
+    id: pick-file
+- tapOn:
+    id: DOC.navBarButton.backInHistory
+    optional: true
+- tapOn:
+    id: DOC.navBarButton.backInHistory
+    optional: true
+- tapOn:
+    text: Обзор
+    optional: true
+- tapOn:
+    text: На.*iPhone
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: ios-documents
+- tapOn:
+    id: statement, pdf
+- assertVisible:
+    id: confirm-import
+- takeScreenshot: ios-confirmation
+- tapOn:
+    id: confirm-import
+- extendedWaitUntil:
+    visible:
+      id: total-amount
+    timeout: 15000
+- takeScreenshot: ios-ready
+- scrollUntilVisible:
+    element:
+      id: details-rec-001
+    direction: DOWN
+- tapOn:
+    id: details-rec-001
+- assertVisible: 2026-10-01
+- takeScreenshot: ios-details
+- tapOn:
+    id: close-details
+- scrollUntilVisible:
+    element:
+      id: details-rec-002
+    direction: DOWN
+- tapOn:
+    id: details-rec-002
+- assertVisible: 2026-10-03
+- tapOn:
+    id: close-details
+- scrollUntilVisible:
+    element:
+      id: delete-import
+    direction: DOWN
+- tapOn:
+    id: delete-import
+- tapOn: Удалить
+- scrollUntilVisible:
+    element:
+      id: screen-title
+    direction: UP
+- extendedWaitUntil:
+    visible: Импорт удален
+    timeout: 15000
+- takeScreenshot: ios-deleted
+- stopRecording

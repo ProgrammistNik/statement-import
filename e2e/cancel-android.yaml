@@ -1,0 +1,53 @@
+appId: com.nikitasokolov.statementimport
+---
+- launchApp:
+    clearState: true
+- assertVisible:
+    id: screen-title
+- scrollUntilVisible:
+    element:
+      id: pick-file
+    direction: DOWN
+- tapOn:
+    id: pick-file
+- back
+- assertVisible:
+    id: pick-file
+- tapOn:
+    id: pick-file
+- tapOn: Show roots
+- tapOn:
+    id: android:id/title
+    text: Downloads
+- tapOn: statement.csv
+- assertVisible:
+    id: confirm-import
+- stopApp
+- launchApp
+- assertVisible:
+    id: confirm-import
+- assertVisible: statement.csv
+- scrollUntilVisible:
+    element:
+      id: cancel-selection
+    direction: DOWN
+- tapOn:
+    id: cancel-selection
+- scrollUntilVisible:
+    element:
+      id: open-diagnostics
+    direction: UP
+- tapOn:
+    id: open-diagnostics
+- scrollUntilVisible:
+    element:
+      id: refresh-diagnostics
+    direction: DOWN
+- tapOn:
+    id: refresh-diagnostics
+- scrollUntilVisible:
+    element:
+      id: diagnostic-counts
+    direction: UP
+- assertVisible: "(?s).*POST: 0.*Создано импортов: 0.*Временных копий: 0.*"
+- takeScreenshot: android-cancel-cleaned

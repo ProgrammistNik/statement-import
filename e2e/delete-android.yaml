@@ -1,0 +1,76 @@
+appId: com.nikitasokolov.statementimport
+---
+- launchApp:
+    clearState: true
+- assertVisible:
+    id: screen-title
+- startRecording: android-delete-failure
+- scrollUntilVisible:
+    element:
+      id: pick-file
+    direction: DOWN
+- tapOn:
+    id: pick-file
+- tapOn: Show roots
+- tapOn:
+    id: android:id/title
+    text: Downloads
+- tapOn: statement.csv
+- assertVisible:
+    id: confirm-import
+- tapOn:
+    id: confirm-import
+- extendedWaitUntil:
+    visible:
+      id: total-amount
+    timeout: 15000
+- assertVisible: 151.99 AUD
+- scrollUntilVisible:
+    element:
+      id: delete-import
+    direction: DOWN
+- tapOn:
+    id: delete-import
+- tapOn: Удалить
+- extendedWaitUntil:
+    visible:
+      id: retry-delete
+    timeout: 15000
+- assertVisible: Данные еще не удалены
+- takeScreenshot: android-delete-failed
+- stopApp
+- launchApp
+- assertVisible: Данные еще не удалены
+- scrollUntilVisible:
+    element:
+      id: open-diagnostics
+    direction: UP
+- tapOn:
+    id: open-diagnostics
+- scrollUntilVisible:
+    element:
+      id: scenario-happy
+    direction: DOWN
+- tapOn:
+    id: scenario-happy
+- scrollUntilVisible:
+    element:
+      id: back-main
+    direction: DOWN
+- tapOn:
+    id: back-main
+- scrollUntilVisible:
+    element:
+      id: retry-delete
+    direction: DOWN
+- tapOn:
+    id: retry-delete
+- scrollUntilVisible:
+    element:
+      id: screen-title
+    direction: UP
+- extendedWaitUntil:
+    visible: Импорт удален
+    timeout: 15000
+- takeScreenshot: android-delete-retried
+- stopRecording

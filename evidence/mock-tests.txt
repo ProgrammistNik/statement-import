@@ -1,0 +1,22 @@
+
+> statement-import@1.0.0 test:mock
+> npm --prefix mobile-engineer-kit test
+
+
+> mobile-engineer-candidate-kit@1.0.0 test
+> node --test mock-server.test.mjs
+
+✔ same key and bytes produce one job; changed bytes conflict (20.30525ms)
+✔ lost acknowledgement is recoverable by key (8.887416ms)
+✔ stale status follows ready, and failed delete does not claim deletion (15.123375ms)
+✔ rejects spoofed and oversized files (15.724041ms)
+✔ accepts the shared PDF fixture as real bytes (2.6855ms)
+✔ job metadata survives a mock process restart (1.77875ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 110.505209

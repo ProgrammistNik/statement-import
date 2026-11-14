@@ -1,0 +1,57 @@
+appId: com.nikitasokolov.statementimport
+---
+- launchApp:
+    clearState: true
+- assertVisible:
+    id: screen-title
+- startRecording: android-lost-ack
+- scrollUntilVisible:
+    element:
+      id: pick-file
+    direction: DOWN
+- tapOn:
+    id: pick-file
+- tapOn: Show roots
+- tapOn:
+    id: android:id/title
+    text: Downloads
+- tapOn: statement.csv
+- assertVisible:
+    id: confirm-import
+- tapOn:
+    id: confirm-import
+- extendedWaitUntil:
+    visible:
+      id: recover-import
+    timeout: 15000
+- takeScreenshot: android-unknown
+- stopApp
+- launchApp
+- extendedWaitUntil:
+    visible:
+      id: total-amount
+    timeout: 15000
+- assertVisible: 151.99 AUD
+- scrollUntilVisible:
+    element:
+      id: open-diagnostics
+    direction: UP
+- tapOn:
+    id: open-diagnostics
+- scrollUntilVisible:
+    element:
+      id: diagnostic-counts
+    direction: DOWN
+- scrollUntilVisible:
+    element:
+      id: refresh-diagnostics
+    direction: DOWN
+- tapOn:
+    id: refresh-diagnostics
+- scrollUntilVisible:
+    element:
+      id: diagnostic-counts
+    direction: UP
+- assertVisible: "(?s).*POST: 1.*Создано импортов: 1.*Временных копий: 0.*"
+- takeScreenshot: android-one-job
+- stopRecording

@@ -1,0 +1,84 @@
+appId: com.nikitasokolov.statementimport
+---
+- launchApp:
+    clearState: true
+- assertVisible:
+    id: screen-title
+- startRecording: android-large-font
+- scrollUntilVisible:
+    element:
+      id: pick-file
+    direction: DOWN
+- tapOn:
+    id: pick-file
+- tapOn: Show roots
+- tapOn:
+    id: android:id/title
+    text: Downloads
+- tapOn: statement.csv
+- scrollUntilVisible:
+    element:
+      id: confirm-import
+    direction: DOWN
+- assertVisible:
+    id: confirm-import
+- takeScreenshot: android-large-confirmation
+- tapOn:
+    id: confirm-import
+- scrollUntilVisible:
+    element:
+      id: total-amount
+    direction: UP
+- assertVisible: 151.99 AUD
+- takeScreenshot: android-large-ready
+- scrollUntilVisible:
+    element:
+      id: details-rec-001
+    direction: DOWN
+- tapOn:
+    id: details-rec-001
+- scrollUntilVisible:
+    element:
+      text: 2026-10-01
+    direction: DOWN
+- assertVisible: 2026-10-01
+- takeScreenshot: android-large-details
+- scrollUntilVisible:
+    element:
+      id: close-details
+    direction: DOWN
+- tapOn:
+    id: close-details
+- scrollUntilVisible:
+    element:
+      id: details-rec-002
+    direction: DOWN
+- tapOn:
+    id: details-rec-002
+- scrollUntilVisible:
+    element:
+      text: 2026-10-03
+    direction: DOWN
+- assertVisible: 2026-10-03
+- scrollUntilVisible:
+    element:
+      id: close-details
+    direction: DOWN
+- tapOn:
+    id: close-details
+- scrollUntilVisible:
+    element:
+      id: delete-import
+    direction: DOWN
+- tapOn:
+    id: delete-import
+- tapOn: Удалить
+- scrollUntilVisible:
+    element:
+      id: screen-title
+    direction: UP
+- extendedWaitUntil:
+    visible: Импорт удален
+    timeout: 15000
+- takeScreenshot: android-large-deleted
+- stopRecording

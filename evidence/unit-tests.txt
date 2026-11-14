@@ -1,0 +1,27 @@
+
+> statement-import@1.0.0 test
+> tsx --test tests/*.test.ts
+
+✔ real HTTP upload and ready report: statement.csv (1182.934416ms)
+✔ real HTTP upload and ready report: statement.pdf (1114.729167ms)
+✔ lost acknowledgement and relaunch recover one job without another POST (1114.077ms)
+✔ lookup 404 on retry reuses persisted key and identical bytes (6.821334ms)
+✔ late creation after lookup 404 still produces only one job (8.25425ms)
+✔ ready revision 3 cannot regress to processing revision 2 (7.122083ms)
+✔ failed deletion preserves intent and key across relaunch; only GET deleted confirms removal (1115.777209ms)
+✔ deleted tombstone cannot be resurrected by a late ready response (1106.534709ms)
+✔ spoofed PDF and oversized files are rejected before HTTP (3.762292ms)
+✔ cancel selection and startup sweep remove private copies (1.20825ms)
+✔ failure to persist posting state prevents POST (1.625167ms)
+✔ relaunch during pending DELETE polls without creating a second deletion key (1108.582667ms)
+✔ DELETE response alone never confirms removal (3.55925ms)
+✔ selected file survives relaunch without an automatic POST (1.671917ms)
+✔ unknown upload waits for explicit recovery or relaunch (8.363ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6988.878459

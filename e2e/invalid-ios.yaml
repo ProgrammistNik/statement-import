@@ -1,0 +1,82 @@
+appId: com.nikitasokolov.statementimport
+---
+- launchApp:
+    clearState: true
+- assertVisible:
+    id: screen-title
+- startRecording: ios-validation
+- scrollUntilVisible:
+    element:
+      id: pick-file
+    direction: DOWN
+- tapOn:
+    id: pick-file
+- tapOn:
+    id: DOC.navBarButton.backInHistory
+    optional: true
+- tapOn:
+    id: DOC.navBarButton.backInHistory
+    optional: true
+- tapOn:
+    text: Обзор
+    optional: true
+- tapOn:
+    text: На.*iPhone
+    optional: true
+- waitForAnimationToEnd
+- tapOn:
+    id: spoofed, pdf
+- scrollUntilVisible:
+    element:
+      id: error-message
+    direction: DOWN
+- takeScreenshot: ios-rejected-spoofed-pdf
+- scrollUntilVisible:
+    element:
+      id: pick-file
+    direction: UP
+- tapOn:
+    id: pick-file
+- tapOn:
+    id: DOC.navBarButton.backInHistory
+    optional: true
+- tapOn:
+    id: DOC.navBarButton.backInHistory
+    optional: true
+- tapOn:
+    text: Обзор
+    optional: true
+- tapOn:
+    text: На.*iPhone
+    optional: true
+- waitForAnimationToEnd
+- tapOn:
+    id: oversize, csv
+- scrollUntilVisible:
+    element:
+      id: error-message
+    direction: DOWN
+- takeScreenshot: ios-rejected-oversize-csv
+- scrollUntilVisible:
+    element:
+      id: open-diagnostics
+    direction: UP
+- tapOn:
+    id: open-diagnostics
+- scrollUntilVisible:
+    element:
+      id: diagnostic-counts
+    direction: DOWN
+- scrollUntilVisible:
+    element:
+      id: refresh-diagnostics
+    direction: DOWN
+- tapOn:
+    id: refresh-diagnostics
+- scrollUntilVisible:
+    element:
+      id: diagnostic-counts
+    direction: UP
+- assertVisible: "(?s).*POST: 0.*Создано импортов: 0.*Временных копий: 0.*"
+- takeScreenshot: ios-no-upload
+- stopRecording

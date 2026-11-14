@@ -1,0 +1,37 @@
+Running on emulator-5556
+ > Flow large-android
+Launch app "com.nikitasokolov.statementimport" with clear state... COMPLETED
+Assert that id: screen-title is visible... COMPLETED
+Start recording android-large-font... COMPLETED
+Scrolling DOWN until id: pick-file is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: pick-file... COMPLETED
+Tap on "Show roots"... COMPLETED
+Tap on "Downloads", id: android:id/title... COMPLETED
+Tap on "statement.csv"... COMPLETED
+Scrolling DOWN until id: confirm-import is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Assert that id: confirm-import is visible... COMPLETED
+Take screenshot android-large-confirmation... COMPLETED
+Tap on id: confirm-import... COMPLETED
+Scrolling UP until id: total-amount is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Assert that "151.99 AUD" is visible... COMPLETED
+Take screenshot android-large-ready... COMPLETED
+Scrolling DOWN until id: details-rec-001 is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: details-rec-001... COMPLETED
+Scrolling DOWN until "2026-10-01" is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Assert that "2026-10-01" is visible... COMPLETED
+Take screenshot android-large-details... COMPLETED
+Scrolling DOWN until id: close-details is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: close-details... COMPLETED
+Scrolling DOWN until id: details-rec-002 is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: details-rec-002... COMPLETED
+Scrolling DOWN until "2026-10-03" is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Assert that "2026-10-03" is visible... COMPLETED
+Scrolling DOWN until id: close-details is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: close-details... COMPLETED
+Scrolling DOWN until id: delete-import is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Tap on id: delete-import... COMPLETED
+Tap on "Удалить"... COMPLETED
+Scrolling UP until id: screen-title is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED
+Assert that "Импорт удален" is visible... COMPLETED
+Take screenshot android-large-deleted... COMPLETED
+Stop recording... COMPLETED
