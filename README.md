@@ -1,5 +1,11 @@
 Statement
 
+[Видео проверки приложения](https://github.com/ProgrammistNik/statement-import/releases/download/v1.0.0/statement-demo.mp4)
+
+[Скачать исходники, APK и сборку для iOS Simulator](https://github.com/ProgrammistNik/statement-import/releases/tag/v1.0.0)
+
+[Подробные результаты тестов](evidence/RESULTS.md)
+
 Нативное приложение на React Native и TypeScript для импорта синтетической банковской выписки. Используется исходный локальный mock из задания. Никаких внешних API, банковских данных и учетных записей не требуется.
 
 Подготовка чистого проекта
